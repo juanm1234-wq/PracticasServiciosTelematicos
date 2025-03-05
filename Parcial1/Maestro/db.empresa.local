@@ -1,0 +1,16 @@
+;
+; BIND data file for local loopback interface
+;
+$TTL 86400
+@   IN  SOA maestro.empresa.local. admin.empresa.local. (
+        2025030401  ; Serial
+        3600        ; Refresh
+        1800        ; Retry
+        604800      ; Expire
+        86400 )     ; Minimum TTL
+;
+@       IN  NS      maestro.empresa.local.
+maestro IN  A       192.168.50.2
+parcial IN  A       192.168.50.3
+www     IN  CNAME   parcial
+
